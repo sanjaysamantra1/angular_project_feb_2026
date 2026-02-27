@@ -9,3 +9,4 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes)
   ]
 };
+// Application level Configuration file
