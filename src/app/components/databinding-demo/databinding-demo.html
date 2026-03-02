@@ -1,0 +1,26 @@
+<h3 class="text-center">Let's Learn DataBinding</h3>
+
+<div class="border border-3 rounded-3 m-3 p-3">
+  <div>Name: {{name}}</div>
+
+  <div>
+    <img src="{{img_url}}" width="200" height="200" />
+    <img [src]="img_url" width="200" height="200" />
+    <img bind-src="img_url" width="200" height="200" />
+  </div>
+
+  <div class="mt-2">
+    <div>Interpolation(1 way): <input value="{{name}}" /></div>
+    <div>Property(1 way): <input [value]="name" /></div>
+    <div>Property(1 way): <input bind-value="name" /></div>
+    <div>2 way: <input [(ngModel)]="name" /></div>
+  </div>
+
+  <div class="mt-2">
+    <button class="btn btn-primary" disabled="{{flag}}">Click me</button>
+    <button class="btn btn-primary mx-2" [disabled]="flag">Click me</button>
+    <button class="btn btn-primary mx-2" bind-disabled="flag">Click me</button>
+
+    <button class="btn btn-success mx-2" (click)="toggleFlag()">Toggle flag</button>
+  </div>
+</div>
