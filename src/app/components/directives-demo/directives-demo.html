@@ -1,0 +1,133 @@
+<h3 class="text-center">Let's Learn Directives</h3>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <div>ngIf Before Angular-17</div>
+  <div><input type="number" [(ngModel)]="num"></div>
+  @if (num%2==0) {
+    <div>{{num}} is Even</div>
+  }
+  @if (num%2!=0) {
+    <div>{{num}} is Odd</div>
+  }
+  <hr />
+  <div>If-Else After Angular-17</div>
+  @if(num%2==0){
+    <div>{{num}} is Even</div>
+    }@else {
+    <div>{{num}} is Odd</div>
+  }
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <div>If vs hidden</div>
+  <pre>
+    -when if condition is false, the element will neither be displayed on the page/screen nor it will be there in the DOM.
+    -when [hidden] condition is true, the element will not be displayed on the page/screen(display:none) but it will be there in the DOM.
+  </pre>
+  @if(num%2==0){
+    <div>{{num}} is Even</div>
+    }@else {
+    <div>{{num}} is Odd</div>
+  }
+  <div [hidden]="num%2!==0">{{num}} is Even</div>
+  <div [hidden]="num%2===0">{{num}} is Odd</div>
+
+  <select [hidden]="num%2==0">
+    @for (state of statesArr; track $index) {
+      <option>{{state}}</option>
+    }
+  </select>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <div>Switch Case:</div>
+  @switch (num) {
+    @case (1) { <h1>Monday</h1> }
+    @case (2) { <h1>Tuesday</h1> }
+    @case (3) { <h1>Wednesday</h1> }
+    @case (4) { <h1>Thursday</h1> }
+    @case (5) { <h1>Friday</h1> }
+    @case (6) { <h1>Saturday</h1> }
+    @case (7) { <h1>Sunday</h1> }
+    @default { <h1>Not a Valid number</h1> }
+  }
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <div>States List using For Loop/Directive</div>
+  <ul>
+    @for (state of statesArr; track $index) {
+      <li [style.color]="$even?'red':'green'">{{state}}</li>
+    }@empty {
+      no data available
+    }
+  </ul>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <div>States dropdown using For Loop/Directive</div>
+  <select [(ngModel)]="selectedState">
+    @for (state of statesArr; track $index) {
+      <option>{{state}}</option>
+    }
+  </select>
+  <div> selectedState: {{selectedState}} </div>
+</div>
+
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <div>Employee Table::</div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        @for (column of columnArr; track $index) {
+          <th>{{column}}</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      @for (emp of employees; track emp.eId) {
+        <tr>
+          <td>{{emp.eId}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.sal}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <div>Employee Table::</div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sl No.</th>
+        <th>emp Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>is First Row?</th>
+        <th>is Last Row?</th>
+        <th>is Even Row?</th>
+        <th>is Odd Row?</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (emp of employees; track $index) {
+        <tr>
+          <td>{{$index+1}}</td>
+          <td>{{emp.eId}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.sal}}</td>
+          <td>{{$first}}</td>
+          <td>{{$last}}</td>
+          <td>{{$even}}</td>
+          <td>{{$odd}}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
