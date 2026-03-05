@@ -1,5 +1,6 @@
 import { DatabindingAssignments } from '../databinding-assignments/databinding-assignments';
 import { DirectivesDemo } from '../directives-demo/directives-demo';
+import { ProductList } from '../product-list/product-list';
 import { DatabindingDemo } from './../databinding-demo/databinding-demo';
 import { Component } from '@angular/core';
 
@@ -8,7 +9,8 @@ import { Component } from '@angular/core';
   imports: [
     // DatabindingDemo
     // DatabindingAssignments
-    DirectivesDemo
+    // DirectivesDemo
+    ProductList
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',

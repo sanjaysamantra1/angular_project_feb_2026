@@ -1,12 +1,16 @@
 
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MyModal } from '../my-modal/my-modal';
 
 @Component({
   selector: 'app-directives-demo',
   imports: [
-    FormsModule
-],
+    FormsModule,
+    CommonModule,
+    MyModal
+  ],
   templateUrl: './directives-demo.html',
   styleUrl: './directives-demo.css',
 })
@@ -15,6 +19,7 @@ export class DirectivesDemo {
   statesArr = ["Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand",
     "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra"];
   selectedState = 'Bihar';
+  status = 'rejected';
 
   employees = [
     { "eId": 101, "name": "sanjay", "sal": 5000, "gender": "male" },
@@ -27,4 +32,11 @@ export class DirectivesDemo {
   constructor() {
     this.columnArr = Object.keys(this.employees[0])
   }
+
+  myStyle1 = { "color": "green", "backgroundColor": "red", "border": "3px dotted yellow" }
+  myStyle2 = { "color": "orangered", "backgroundColor": "lightgreen", "border": "3px dotted yellow" }
+  myFunction() {
+    return this.num % 2 == 0 ? this.myStyle1 : this.myStyle2;
+  }
+
 }
