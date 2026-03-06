@@ -2,6 +2,15 @@
 
 <div class="container">
   <div class="row">
+    <div class="col-sm-3 form-control">
+      <select (change)="filterProducts($event)">
+        @for (categoryItem of categorySet; track $index) {
+          <option>{{categoryItem}}</option>
+        }
+      </select>
+    </div>
+  </div>
+  <div class="row mt-2">
     @for (product of productArr; track $index) {
     <div class="col-sm-3 card">
       <img src="{{product.image}}" class="card-img-top" alt="..." style="height: 150px;">

@@ -1,3 +1,4 @@
+import { DirectiveAssignments } from './../directive-assignments/directive-assignments';
 import { DatabindingAssignments } from '../databinding-assignments/databinding-assignments';
 import { DirectivesDemo } from '../directives-demo/directives-demo';
 import { ProductList } from '../product-list/product-list';
@@ -10,7 +11,8 @@ import { Component } from '@angular/core';
     // DatabindingDemo
     // DatabindingAssignments
     // DirectivesDemo
-    ProductList
+    ProductList,
+    DirectiveAssignments
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
