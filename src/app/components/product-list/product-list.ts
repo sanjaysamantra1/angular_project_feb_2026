@@ -3,7 +3,8 @@ import product_data from './product_data';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import Swal from 'sweetalert2';
+import Snackbar from 'awesome-snackbar';
 @Component({
   selector: 'app-product-list',
   imports: [FontAwesomeModule, NgxPaginationModule],
@@ -43,5 +44,29 @@ export class ProductList {
   }
   sortDesc() {
     this.productArr.sort((p1, p2) => p2.price - p1.price);
+  }
+
+  openSnackBar() {
+    new Snackbar('Helloooo, Good Morning',
+      { position: 'top-center', theme: 'light', timeout: 5000, actionText: 'X' }
+    );
+  }
+  openAlert() {
+    Swal.fire('Good job!', 'You clicked the button!', 'success');
+  }
+  openConfirm() {
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success');
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info');
+      }
+    });
   }
 }
