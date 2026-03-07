@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
     // DatabindingAssignments
     // DirectivesDemo
     ProductList,
-    DirectiveAssignments
+    // DirectiveAssignments
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
