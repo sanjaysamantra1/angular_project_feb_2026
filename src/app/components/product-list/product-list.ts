@@ -6,12 +6,18 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import Swal from 'sweetalert2';
 import Snackbar from 'awesome-snackbar';
 import { Textonly } from '../../custom_directives/textonly';
+import { Disablepaste } from '../../custom_directives/disablepaste';
+import { Disablerightclick } from '../../custom_directives/disablerightclick';
+import { Zoomin } from '../../custom_directives/zoomin';
 @Component({
   selector: 'app-product-list',
   imports: [
     FontAwesomeModule,
     NgxPaginationModule,
-    Textonly
+    Textonly,
+    Disablepaste,
+    Disablerightclick,
+    Zoomin
   ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
