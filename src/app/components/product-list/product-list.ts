@@ -5,9 +5,14 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { NgxPaginationModule } from 'ngx-pagination';
 import Swal from 'sweetalert2';
 import Snackbar from 'awesome-snackbar';
+import { Textonly } from '../../custom_directives/textonly';
 @Component({
   selector: 'app-product-list',
-  imports: [FontAwesomeModule, NgxPaginationModule],
+  imports: [
+    FontAwesomeModule,
+    NgxPaginationModule,
+    Textonly
+  ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
