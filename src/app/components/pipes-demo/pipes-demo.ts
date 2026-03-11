@@ -7,13 +7,15 @@ import { CreditcardPipe } from '../../custom-pipes/creditcard-pipe';
 import { AgePipe } from '../../custom-pipes/age-pipe';
 import { SalutationPipe } from '../../custom-pipes/salutation-pipe';
 import { FilterPipe } from '../../custom-pipes/filter-pipe';
+import { RomanPipe } from '../../custom-pipes/roman-pipe';
 
 @Component({
   selector: 'app-pipes-demo',
   imports: [CommonModule, FormsModule, RemainingPipe,
      OrdinalPipe, CreditcardPipe, AgePipe,
      SalutationPipe,
-     FilterPipe
+     FilterPipe,
+     RomanPipe
     ],
   templateUrl: './pipes-demo.html',
   styleUrl: './pipes-demo.css',
