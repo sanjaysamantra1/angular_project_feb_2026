@@ -86,3 +86,41 @@
   <textarea [(ngModel)]="msg"></textarea>
   <div>Remaining: {{msg | remaining}}</div>
 </div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Custom Pipe(ordinal)::</div>
+  <input [(ngModel)]="num" type="number" />
+  <div>Ordinal value: {{num | ordinal}}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Custom Pipe(credit card)::</div>
+  <input [(ngModel)]="cardNumber" />
+  <div>cardNumber: {{cardNumber | creditcard}}</div>
+</div>
+
+<div class="border border-2 rounded-2 p-2 m-2">
+  <div>Custom Pipe(Age)::</div>
+  <input type='date' [(ngModel)]="dob" />
+  <div>Age is : {{dob | age}}</div>
+</div>
+
+
+<div class="border border-2 rounded-2 m-2 p-2">
+  <div>Employee Table::</div>
+  <input type="search" [(ngModel)]="searchText" class="form-control col-sm-2 m-2" placeholder="Search..." />
+
+  <table class="table table-bordered">
+    <tbody>
+      @for (emp of employees | filter:searchText; track emp.id) {
+      <tr>
+        <td>{{emp.id}}</td>
+        <td>{{emp.name | salutation : emp.gender}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.status}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
