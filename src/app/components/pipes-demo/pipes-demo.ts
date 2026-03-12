@@ -8,6 +8,7 @@ import { AgePipe } from '../../custom-pipes/age-pipe';
 import { SalutationPipe } from '../../custom-pipes/salutation-pipe';
 import { FilterPipe } from '../../custom-pipes/filter-pipe';
 import { RomanPipe } from '../../custom-pipes/roman-pipe';
+import { MySortPipe } from '../../pipes/my-sort-pipe';
 
 @Component({
   selector: 'app-pipes-demo',
@@ -15,7 +16,8 @@ import { RomanPipe } from '../../custom-pipes/roman-pipe';
      OrdinalPipe, CreditcardPipe, AgePipe,
      SalutationPipe,
      FilterPipe,
-     RomanPipe
+     RomanPipe,
+     MySortPipe
     ],
   templateUrl: './pipes-demo.html',
   styleUrl: './pipes-demo.css',
@@ -41,4 +43,6 @@ export class PipesDemo {
         { id: 6, name: 'Neha Gupta', role: 'Tester', salary: 72000, status: 'Active', gender: 'female' }
   ];
   searchText:string = '';
+
+  numArr = [40,10,50,20,30];
 }

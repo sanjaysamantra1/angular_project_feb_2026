@@ -5,6 +5,7 @@ import { DirectivesDemo } from '../directives-demo/directives-demo';
 import { ProductList } from '../product-list/product-list';
 import { DatabindingDemo } from './../databinding-demo/databinding-demo';
 import { Component } from '@angular/core';
+import { Parent } from '../parent/parent';
 
 @Component({
   selector: 'app-body',
@@ -14,7 +15,8 @@ import { Component } from '@angular/core';
     // DirectivesDemo
     // ProductList,
     // DirectiveAssignments
-    PipesDemo
+    // PipesDemo
+    Parent
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
