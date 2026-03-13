@@ -1,3 +1,4 @@
+import { EmployeeCrud } from './../employee-crud/employee-crud';
 import { PipesDemo } from './../pipes-demo/pipes-demo';
 import { DirectiveAssignments } from './../directive-assignments/directive-assignments';
 import { DatabindingAssignments } from '../databinding-assignments/databinding-assignments';
@@ -16,7 +17,8 @@ import { Parent } from '../parent/parent';
     // ProductList,
     // DirectiveAssignments
     // PipesDemo
-    Parent
+    // Parent
+    EmployeeCrud
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
