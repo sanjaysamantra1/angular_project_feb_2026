@@ -17,8 +17,8 @@ import { Parent } from '../parent/parent';
     // ProductList,
     // DirectiveAssignments
     // PipesDemo
-    // Parent
-    EmployeeCrud
+    Parent
+    // EmployeeCrud
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',

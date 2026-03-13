@@ -17,4 +17,14 @@ export class Child1 {
   sendDataToParent() {
     this.carsEvent.emit(this.cars);
   }
+
+  constructur() {
+    console.log('Child1 Constructor');
+  }
+  ngOnChanges() {
+    console.log('Child1 ngOnChanges');
+  }
+  ngOnInit() {
+    console.log('Child1 ngOnInit');
+  }
 }
