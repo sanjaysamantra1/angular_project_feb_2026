@@ -5,6 +5,13 @@
   <!-- <app-product-list></app-product-list> -->
   <!-- <app-directive-assignments></app-directive-assignments> -->
   <!-- <app-pipes-demo></app-pipes-demo> -->
-   <app-parent></app-parent>
-    <!-- <app-employee-crud></app-employee-crud> -->
+  <!-- <app-parent></app-parent> -->
+  <!-- <app-employee-crud></app-employee-crud> -->
+
+  <button (click)="flag=!flag">Toggle</button>
+  @if(flag){
+    <app-demo1></app-demo1>
+  }@else {
+    <app-demo2></app-demo2>
+  }
 </div>

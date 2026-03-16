@@ -6,4 +6,17 @@ import { Component } from '@angular/core';
   templateUrl: './demo1.html',
   styleUrl: './demo1.css',
 })
-export class Demo1 {}
+export class Demo1 {
+  timerId: number | undefined;
+  ngOnInit() {
+    this.timerId = setInterval(() => {
+      console.log('I am Interval From Demo-1');
+    }, 1000);
+
+    console.log('Demo-1 ngOnInit');
+  }
+  ngOnDestroy() {
+    console.log('Demo-1 ngOnDestroy');
+    clearInterval(this.timerId);
+  }
+}
