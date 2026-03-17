@@ -1,3 +1,4 @@
+import { MathService } from './../../services/math-service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './demo1.css',
 })
 export class Demo1 {
+  constructor(private mathService: MathService) { // Dependency Injection
+    console.log(this.mathService.sum([10,20,30,40,50]));
+    console.log(this.mathService.average([10,20,30,40,50]));
+  }
+
   timerId: number | undefined;
   ngOnInit() {
     this.timerId = setInterval(() => {
