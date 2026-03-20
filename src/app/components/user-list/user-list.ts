@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
   styleUrl: './user-list.css',
 })
 export class UserList {
-  user_api_url = 'https://jsonplaceholder.typicode.com/users';
+  user_api_url = 'ttps://jsonplaceholder.typicode.com/users';
   httpClient = inject(HttpClient);
   userData: Observable<any> | undefined;
 

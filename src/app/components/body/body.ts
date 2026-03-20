@@ -12,6 +12,7 @@ import { Demo2 } from '../demo2/demo2';
 import { HttpDemo1 } from '../http-demo1/http-demo1';
 import { UserList } from '../user-list/user-list';
 import { Products } from '../products/products';
+import { CommentList } from '../comment-list/comment-list';
 
 @Component({
   selector: 'app-body',
@@ -27,8 +28,9 @@ import { Products } from '../products/products';
     // Demo1,
     // Demo2,
     // HttpDemo1
-    // UserList
-    Products
+    // UserList,
+    // Products
+    CommentList
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',

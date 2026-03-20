@@ -17,7 +17,7 @@ export class Products {
 
   fetchProducts() {
     this.isLoading.set(true);
-    this.httpClient.get('https://fakestoreapi.com/products').subscribe((response) => {
+    this.httpClient.get('ttps://fakestoreapi.com/products').subscribe((response) => {
       this.productArr.set(response);
       this.isLoading.set(false);
     });
