@@ -1,3 +1,4 @@
+import { SubjectDemo1 } from './../subject-demo1/subject-demo1';
 import { EmployeeCrud } from './../employee-crud/employee-crud';
 import { PipesDemo } from './../pipes-demo/pipes-demo';
 import { DirectiveAssignments } from './../directive-assignments/directive-assignments';
@@ -17,6 +18,7 @@ import { EmployeeList } from '../employee-list/employee-list';
 import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
+import { CartList } from '../cart-list/cart-list';
 
 @Component({
   selector: 'app-body',
@@ -33,12 +35,14 @@ import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
     // Demo2,
     // HttpDemo1
     // UserList,
-    // Products
+    Products,
     // CommentList
     // EmployeeList
     // ObservableDemo1
     // ObservableDemo2
-    ObservableDemo3
+    // ObservableDemo3
+    // SubjectDemo1
+    CartList
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',

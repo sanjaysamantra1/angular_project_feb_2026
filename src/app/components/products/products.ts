@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
+import { CartService } from '../../services/cart-service';
 
 @Component({
   selector: 'app-products',
@@ -10,6 +11,7 @@ import { Component, inject, signal } from '@angular/core';
 })
 export class Products {
   httpClient = inject(HttpClient);
+  cartService = inject(CartService);
   productArr: any = signal([]);
   isLoading = signal(false);
 
@@ -17,9 +19,13 @@ export class Products {
 
   fetchProducts() {
     this.isLoading.set(true);
-    this.httpClient.get('ttps://fakestoreapi.com/products').subscribe((response) => {
+    this.httpClient.get('https://fakestoreapi.com/products').subscribe((response) => {
       this.productArr.set(response);
       this.isLoading.set(false);
     });
+  }
+
+  addToCart(product: any) {
+    this.cartService.addItem(product);
   }
 }
