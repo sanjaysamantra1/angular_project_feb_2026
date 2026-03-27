@@ -1,3 +1,4 @@
+import { SignalDemo1 } from './../signal-demo1/signal-demo1';
 import { SubjectDemo1 } from './../subject-demo1/subject-demo1';
 import { EmployeeCrud } from './../employee-crud/employee-crud';
 import { PipesDemo } from './../pipes-demo/pipes-demo';
@@ -19,6 +20,7 @@ import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
 import { CartList } from '../cart-list/cart-list';
+import { SignalDemo2 } from '../signal-demo2/signal-demo2';
 
 @Component({
   selector: 'app-body',
@@ -35,14 +37,16 @@ import { CartList } from '../cart-list/cart-list';
     // Demo2,
     // HttpDemo1
     // UserList,
-    Products,
+    // Products,
     // CommentList
     // EmployeeList
     // ObservableDemo1
     // ObservableDemo2
     // ObservableDemo3
     // SubjectDemo1
-    CartList
+    // CartList
+    // SignalDemo1
+    SignalDemo2
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
