@@ -6,6 +6,7 @@ import { Component, effect, inject, signal, WritableSignal } from '@angular/core
   imports: [],
   templateUrl: './signal-demo2.html',
   styleUrl: './signal-demo2.css',
+  standalone: true
 })
 export class SignalDemo2 {
   httpClient = inject(HttpClient);

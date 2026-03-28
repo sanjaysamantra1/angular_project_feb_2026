@@ -21,6 +21,9 @@ import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
 import { CartList } from '../cart-list/cart-list';
 import { SignalDemo2 } from '../signal-demo2/signal-demo2';
+import { FormDemo1 } from '../form-demo1/form-demo1';
+import { TemplateFormDemo1 } from '../template-form-demo1/template-form-demo1';
+import { SignalFormDemo1 } from '../signal-form-demo1/signal-form-demo1';
 
 @Component({
   selector: 'app-body',
@@ -46,7 +49,10 @@ import { SignalDemo2 } from '../signal-demo2/signal-demo2';
     // SubjectDemo1
     // CartList
     // SignalDemo1
-    SignalDemo2
+    // SignalDemo2
+    // FormDemo1
+    // TemplateFormDemo1
+    SignalFormDemo1
   ],
   templateUrl: './body.html',
   styleUrl: './body.css',
