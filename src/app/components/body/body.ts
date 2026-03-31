@@ -26,10 +26,12 @@ import { TemplateFormDemo1 } from '../template-form-demo1/template-form-demo1';
 import { SignalFormDemo1 } from '../signal-form-demo1/signal-form-demo1';
 import { ModelForm } from '../model-form/model-form';
 import { DynamicForm } from '../dynamic-form/dynamic-form';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-body',
   imports: [
+    RouterOutlet,
     // DatabindingDemo
     // DatabindingAssignments
     // DirectivesDemo
