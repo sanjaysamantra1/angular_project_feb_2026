@@ -9,6 +9,7 @@ import { Textonly } from '../../custom_directives/textonly';
 import { Disablepaste } from '../../custom_directives/disablepaste';
 import { Disablerightclick } from '../../custom_directives/disablerightclick';
 import { Zoomin } from '../../custom_directives/zoomin';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-product-list',
   imports: [
@@ -17,7 +18,8 @@ import { Zoomin } from '../../custom_directives/zoomin';
     Textonly,
     Disablepaste,
     Disablerightclick,
-    Zoomin
+    Zoomin,
+    RouterLink
   ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
