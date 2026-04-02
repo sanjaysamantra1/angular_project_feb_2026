@@ -9,6 +9,8 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './template-form-demo1.css',
 })
 export class TemplateFormDemo1 {
+  hasChanges = true; // form is not saved
+
   myForm = {
     firstName: 'sanjay',
     lastName: 'samantra',
@@ -16,5 +18,6 @@ export class TemplateFormDemo1 {
 
   submitMyForm(formData: NgForm) {
     console.log(formData);
+    this.hasChanges = false; // form is  saved
   }
 }

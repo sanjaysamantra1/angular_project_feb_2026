@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {Heavy} from '../heavy/heavy'
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [
+    Heavy
+  ],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
